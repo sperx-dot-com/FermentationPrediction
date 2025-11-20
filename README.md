@@ -4,7 +4,7 @@ Although the dataset used here is synthetic, it reflects key characteristics of 
 
 The goal of this project is to demonstrate how domain knowledge from bioprocess development can be combined with data-driven machine learning approaches to extract meaningful signals and make predictive models.
 
-## 🧪 Key Concepts
+## Key Concepts
 
 ### 1. Synthetic Bioprocess Dataset
 A mock dataset inspired by upstream E. coli fermentations is generated, including:
@@ -62,33 +62,43 @@ Models are evaluated using:
 This illustrates how different model families perform on small, noisy bioprocess datasets.
 
 
+## How to Interpret Model Metrics
 
-### 5. Feature Importance and Interpretation
+Predictive modelling in bioprocess development requires metrics that are both technically meaningful and practically interpretable.
 
-Feature importances are extracted from the Random Forest model to identify:
+### R² (Coefficient of Determination)
+Indicates how much variance in the target variable is explained by the model.
 
-- influential process variables  
-- effects of strain and tag type  
-- relationships between parameters and titer  
-- connections to bioprocess domain knowledge  
+- 1.0 → perfect prediction  
+- 0.0 → no better than mean prediction  
+- <0 → worse than baseline  
+
+Due to biological noise and small datasets, **R² values between 0.6 and 0.85 are often already strong** in bioprocess applications.
+
+### MAE (Mean Absolute Error)
+Average absolute deviation between predictions and true values.
+
+- expressed in real units (e.g., g/L)
+- easy to interpret  
+- useful for practical decision-making
+
+### MSE (Mean Squared Error)
+Average squared deviation.
+
+- penalizes large errors more strongly  
+- often used as training loss  
+- less intuitive due to squared unit  
+
+### Summary Table
+
+| Metric | Strength | When to Use |
+|--------|----------|--------------|
+| **R²** | Measures explained variance | Compare model fit |
+| **MAE** | Interpretable in real units | Assess practical prediction accuracy |
+| **MSE** | Penalizes large errors | Monitor robustness and outliers |
 
 
-## 🎯 Purpose of This Repository
-
-This project serves as a demonstration and learning tool for professionals at the interface of:
-
-- bioprocess development  
-- protein and strain engineering  
-- analytical data processing (e.g., LC–MS)  
-- machine learning with Python  
-
-It highlights:
-
-- how to design a bioprocess modelling workflow  
-- how to integrate biological expertise into modelling  
-- how to handle small or noisy datasets  
-- how predictive models can support development decisions
-
+ 
 
 ## Not Yet considered
 - using different protein sequences to predict the titer based on the sequence
