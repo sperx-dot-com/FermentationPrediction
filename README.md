@@ -21,7 +21,6 @@ A mock dataset inspired by upstream E. coli fermentations is generated, includin
 
 This mimics typical structures of bioprocess development data.
 
----
 
 ### 2. Exploratory Data Analysis (EDA)
 
@@ -32,7 +31,6 @@ Basic descriptive statistics and visualizations to understand:
 - noise patterns  
 - possible biological effects  
 
----
 
 ### 3. Preprocessing Pipelines (scikit-learn)
 
@@ -45,7 +43,6 @@ A complete preprocessing workflow using:
 
 This avoids data leakage and ensures consistent preprocessing for modelling.
 
----
 
 ### 4. Machine Learning Models
 
@@ -64,7 +61,7 @@ Models are evaluated using:
 
 This illustrates how different model families perform on small, noisy bioprocess datasets.
 
----
+
 
 ### 5. Feature Importance and Interpretation
 
@@ -75,7 +72,6 @@ Feature importances are extracted from the Random Forest model to identify:
 - relationships between parameters and titer  
 - connections to bioprocess domain knowledge  
 
----
 
 ## 🎯 Purpose of This Repository
 
@@ -93,12 +89,8 @@ It highlights:
 - how to handle small or noisy datasets  
 - how predictive models can support development decisions
 
----
 
 ## Not Yet considered
 - using different protein sequences to predict the titer based on the sequence
 - for this, ESM embedding would be a possibility (to encode amino acid sequences)
 
-
-```bash
-pip install -r requirements.txt
