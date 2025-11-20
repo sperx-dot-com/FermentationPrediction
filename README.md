@@ -51,7 +51,7 @@ The notebook trains several regression models:
 - **Linear Regression** (baseline)  
 - **Random Forest Regressor**  
 - **XGBoost Regressor**  
-- **Small pytorch neural network**
+- **Small PyTorch feed-forward neural network**
 
 Models are evaluated using:
 
