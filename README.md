@@ -1,4 +1,4 @@
-# FermentationPrediction
+# Conceptual Bioprocess Modelling Workflow in Python
 This repository provides a conceptual and educational end-to-end workflow for processing, exploring and modeling fermentation and upstream bioprocess data using Python.
 Although the dataset used here is synthetic, it reflects key characteristics of real E. coli bioprocess runs such as limited sample size, measurement noise, interacting variables and categorical process factors.
 
